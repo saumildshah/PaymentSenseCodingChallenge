@@ -1,0 +1,22 @@
+
+<div>
+
+  <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]"></mat-paginator>
+  <mat-table [dataSource]="countriesDataSource">
+
+    <ng-container matColumnDef="name">
+      <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+      <mat-cell *matCellDef="let row"> <a routerLink="/country-detail" [state]="{data: row}"><h1>{{row.name}}</h1></a> </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="flag">
+      <mat-header-cell *matHeaderCellDef> Flag </mat-header-cell>
+      <mat-cell *matCellDef="let row"> <img src="{{row.flag}}" /></mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;">
+    </mat-row>
+  </mat-table>
+
+</div>

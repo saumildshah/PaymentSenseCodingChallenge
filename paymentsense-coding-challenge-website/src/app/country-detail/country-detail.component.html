@@ -1,0 +1,55 @@
+
+<div>
+  <h1>{{ country.name }}</h1>
+  <img src="{{country.flag}}" />
+  <div>
+    <h2>Region: {{ country.region }} </h2>
+  </div>
+  <div>
+    <h2>SubRegion: {{ country.subregion }} </h2>
+  </div>
+  <div>
+    <h2>Population: {{ country.population }} </h2>
+  </div>
+  <div>
+    <h2>Capital: {{ country.capital }} </h2>
+  </div>
+  <div>
+    <h2>Timezones: </h2>
+    <ul>
+      <li *ngFor="let t of country.timezones">
+        {{t}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div>
+    <h2>Languages: </h2>
+    <ul>
+      <li *ngFor="let l of country.languages">
+        {{l.name}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div>
+    <h2>Currencies: </h2>
+    <ul>
+      <li *ngFor="let c of country.currencies">
+        {{c.name}}
+      </li>
+    </ul>
+  </div>
+
+
+  <div>
+    <h2>Border Countries: </h2>
+    <ul>
+      <li *ngFor="let b of country.borders">
+        {{b}}
+      </li>
+    </ul>
+  </div>
+</div>
